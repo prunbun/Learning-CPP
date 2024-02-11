@@ -23,7 +23,7 @@ class Account {
         void Withdraw(float amount);
         void Deposit(float amount);
 
-        // An account doesn't directly have an interest rate 
+        // Note that child classes will implement this 
         float GetInterestRate()const; 
         
 };
