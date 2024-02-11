@@ -1,9 +1,9 @@
 #include <iostream>
-#include "Account.h"
+#include "Savings.h"
 using namespace std;
 
 int main() {
-    Account new_account("Flynn Rider's Account", 100); // Note, this is a local variable, not on heap
+    Savings new_account("Flynn Rider's Account", 100, 0.01); // Note, this is a local variable, not on heap
     cout << "hi Flynn Rider!" << endl; 
 
     cout << "Your new account has balance: " << new_account.GetBalance() << "!" << endl;
@@ -11,7 +11,8 @@ int main() {
     new_account.Deposit(200);
     cout << "Your deposit has completed! Your account now has balance: " << new_account.GetBalance() << "!" << endl;
 
-    new_account.Withdraw(500);
+    new_account.AccumulateInterest();
+    cout << "After interest, your new account has balance: " << new_account.GetBalance() << "!" << endl;
 
     return 0;
 }

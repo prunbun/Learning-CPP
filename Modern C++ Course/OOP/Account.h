@@ -4,9 +4,11 @@ using namespace std;
 class Account {
     private:
         string m_Name;
-        float m_Balance;
         int m_Account_Number;
         static int s_Account_Number_Generator;
+
+    protected:
+        float m_Balance;
 
     public:
         // Constructors and Destructors
